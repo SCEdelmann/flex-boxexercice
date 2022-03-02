@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+        .flex-container div {
+            box-sizing: border-box;
+            /* o tamanho do box considera a borda. */
+        }
+        .flex-container {
+            /* O display Flex por padrao tera o direcioanamento das linhas Main Axis. */
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+        /* Aplicar uma propriedade para o terceiro filho. */
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+          /* A ordem de exibicao.  */
+            order: 1;
+            /*O flex grow 0 nao cresce. e se aplicar o 1...creesce de forma igual. e tem o flex-schrink e dai encolhe.  A logica de ocupar o espaco que falta. */
+            flex-grow:0 ;
+
+        }
+        /* ... */
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
